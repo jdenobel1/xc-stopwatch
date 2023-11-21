@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <div class="container" style="text-align: center; font-size: 24px;">
+        <div id="stopwatch" style="font-size: 48px;">
+            00:00:00.00
+        </div>
+
+        <!-- Live Webcam Display -->
+        <video id="webcam" autoplay style="max-width: 100%;"></video>
+
+        <div id="buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <!-- Row 1 -->
+            <button onclick="openDirections()">Directions</button>
+            <button onclick="resetTimer()">Reset</button>
+            <button onclick="startTimer()">Start Timer</button>
+            <button onclick="stopTimer()">Stop Timer</button>
+        </div>
+
+        <div id="buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <!-- Row 2 -->
+            <button id="startRecordingButton">Start Recording</button>
+            <button id="stopRecordingButton" disabled>Stop Recording</button>
+            <button id="startScreenRecordingButton">Start Screen Recording</button>
+            <button id="stopScreenRecordingButton" disabled>Stop Screen Recording</button>
+        </div>
+
+        <div id="buttons" style="display: flex; flex-wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <!-- Row 3 -->
+            <button onclick="recordLap()">Record Lap</button>
+            <input type="text" id="bibEntry" placeholder="Enter Bib Number">
+            <button onclick="exportLaps()">Export Laps</button>
+        </div>
+        
+       <div id="note" style="text-align: center; font-size: 18px; margin-bottom: 20px;">
+            Note: You must export laps before stopping either recording.
+        </div>
+
+        <div id="laps">
+            <p>Lap Times: </p>
+            <ul id="lapList" style="list-style-type: none; padding: 0; margin: 0;"></ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
