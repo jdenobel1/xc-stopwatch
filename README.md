@@ -1,5 +1,5 @@
 This project provides a simple web-based stopwatch with additional features for recording webcam and screen activities. The application is designed with a clean and responsive user interface.
-Features
+Features  (error --> the time is offset by a few seconds depending how long you run the stopwatch ... have moved around to xnotestopwatch and using two webcams)
 
     Stopwatch: Displayed prominently at the top, the stopwatch shows elapsed time in the format HH:MM:SS.SS.
 
